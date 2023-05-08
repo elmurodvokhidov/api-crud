@@ -124,7 +124,14 @@ function Context({ children }) {
         setModal(!modal);
         setInput({
             name: '',
-        })
+        });
+    };
+
+    function closeModal() {
+        setModal(!modal);
+        setInput({
+            name: '',
+        });
     }
 
     return (
@@ -140,6 +147,7 @@ function Context({ children }) {
             edit,
             spinner,
             setSpinner,
+            closeModal,
         }}>
             {children}
         </ContextData.Provider>
